@@ -29,4 +29,4 @@ alerting:
 
 # Rules and alerts are read from the specified file(s)
 rule_files:
-  - /etc/prometheus/rules.yml
+  - rules.yml
