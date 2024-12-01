@@ -27,7 +27,7 @@ vagrant up
 
 Pourvous connecter à la machine vous pouvez la commande suivante après la création de la machine 
 ```bash
-vagrant ssh formation-docker
+vagrant ssh formation-prometheus
 ```
 
 Lorsque vous finissez votre TP, vous pouvez détruire la machine de test avec la commande ci-dessous:
