@@ -1,7 +1,9 @@
 services:
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus
     restart: unless-stopped
+    labels:
+      org.label-schema.group: "observabilite"
     volumes:
       - ./prometheus:/etc/prometheus
       - prometheus_data:/prometheus
@@ -14,12 +16,14 @@ services:
     expose:
       - 9090
     ports:
-    - 9090:9090
+      - 9090:9090
     networks:
       - observability
   
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana
+    labels:
+      org.label-schema.group: "observabilite"
     volumes:
       - grafana_data:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
@@ -36,14 +40,26 @@ services:
       - observability
   
   alertmanager:
-    image: prom/alertmanager:latest
+    image: prom/alertmanager
     restart: unless-stopped
+    labels:
+      org.label-schema.group: "observabilite"
     ports:
       - "9093:9093"
     volumes:
       - "./alertmanager:/config"
       - alertmanager_data:/data
     command: --config.file=/config/alertmanager.yml --log.level=debug
+    networks:
+      - observability
+  
+  pushgateway:
+    image: prom/pushgateway
+    restart: unless-stopped
+    labels:
+      org.label-schema.group: "observabilite"
+    ports:
+      - "9091:9091"
     networks:
       - observability
 
