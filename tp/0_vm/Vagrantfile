@@ -16,6 +16,5 @@ Vagrant.configure("2") do |config|
     
     #Installer Docker et télécharger l'image alpine 
     config.vm.provision "docker"
-    end
 
 end
