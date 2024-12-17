@@ -1,5 +1,5 @@
 $script = <<-SCRIPT
-yum -y update; yum -y install git;
+apt -y update; apt -y install git;
 cd /opt; git clone https://github.com/Dynatrace/easytrade.git
 cd easytrade; docker compose up -d
 SCRIPT
@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     #Definir le hostname de la VM
     config.vm.hostname = "formation-prometheus"
     
-    config.vm.box = "bento/centos-7"
+    config.vm.box = "bento/ubuntu-24.04"
     
     #Installer Docker et télécharger l'image alpine 
     config.vm.provision "docker" do |d|
