@@ -1,12 +1,12 @@
 Vagrant.configure("2") do |config|
     
     #Definir le nom de la machine dans vagrant. Replace default
-    config.vm.define "formation-dynatrace"
+    config.vm.define "formation-prometheus"
     
     #Definir le provider 
     config.vm.provider "virtualbox" do |v|
         #Definir le nom de la VM dans le provider en remplacement de celui par defaut
-        v.name = "formation-dynatrace"
+        v.name = "formation-prometheus"
     end
 
     #Definir le hostname de la VM
