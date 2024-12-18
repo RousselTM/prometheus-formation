@@ -2,7 +2,7 @@ groups:
 - name: De la découverte à l'expertise
   rules:
 
-  # Alert for any instance that is unreachable for >2 minutes.
+  # Alert for any instance that is unreachable for >1 minutes.
   - alert: service_down
     expr: up == 0
     for: 1m
@@ -12,6 +12,7 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minutes."
 
+  # Alert for any instance that load1 is more than 0.5 for >2 minutes.
   - alert: high_load
     expr: node_load1 > 0.5
     for: 2m
