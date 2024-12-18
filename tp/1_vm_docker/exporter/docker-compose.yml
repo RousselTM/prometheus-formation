@@ -33,4 +33,4 @@ services:
 
 networks:
   observability:
-    driver: bridge
+    external: true

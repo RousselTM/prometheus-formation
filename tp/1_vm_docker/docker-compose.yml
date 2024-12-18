@@ -65,7 +65,7 @@ services:
 
 networks:
   observability:
-    driver: bridge
+    external: true
 
 volumes:
   prometheus_data: {}
