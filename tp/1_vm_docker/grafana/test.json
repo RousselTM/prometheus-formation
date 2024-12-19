@@ -1,1 +1,10 @@
-[{"formation": "prometheus / Grafana", "duree": 3}, {"formation": "Dynatrace", "duree": 2}]
+[
+    {
+        "formation": "prometheus / Grafana",
+        "duree": 3
+    },
+    {
+        "formation": "Dynatrace",
+        "duree": 2
+    }
+]
