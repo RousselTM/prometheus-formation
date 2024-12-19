@@ -1,0 +1,13 @@
+{
+    "office": "rousseltm",
+    "formations": [
+        {
+            "formation": "prometheus / Grafana",
+            "duree": 3
+        },
+        {
+            "formation": "Dynatrace",
+            "duree": 2
+        }
+    ]
+}
