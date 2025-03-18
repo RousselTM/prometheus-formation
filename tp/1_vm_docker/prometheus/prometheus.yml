@@ -16,7 +16,7 @@ scrape_configs:
       - targets: ['cadvisor:8080']
 
 #remote_write:
-#  - url: '<Your Prometheus remote_write endpoint>'
+#  - url: '<Your Prometheus remote_write endpoint. Exemple pour Mimir https://DOMAIN/api/v1/push>'
 #    basic_auth:
 #      username: '<Your Grafana Username>'
 #      password: '<Your Grafana API key>'
