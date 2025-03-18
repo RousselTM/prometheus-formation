@@ -20,6 +20,9 @@ scrape_configs:
 #    basic_auth:
 #      username: '<Your Grafana Username>'
 #      password: '<Your Grafana API key>'
+#    headers:
+#      # Affecter les donnees au tenant "rousseltm"
+#      X-Scope-OrgID: rousseltm
 
 alerting:
   alertmanagers:
